@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Prismic Eloquent Example</title>
 
     <link rel="stylesheet" type="text/css" href="{{ mix('css/site.css') }}">
