@@ -10,10 +10,5 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/blog', 'BlogPostController@index')->name('blog.index');
-Route::get('/blog/{slug}', 'BlogPostController@show')->name('blog.show');
+Route::get('/', 'BlogPostController@index')->name('blog.index');
+Route::get('/{slug}', 'BlogPostController@show')->name('blog.show');
