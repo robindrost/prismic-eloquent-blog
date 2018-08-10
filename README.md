@@ -2,7 +2,7 @@
 
 This is an example on how to create a blog with Laravel and the Prismic Eloquent package.
 
-[https://github.com/robindrost/prismic-eloquent](Prismic Eloquent)
+[Prismic Eloquent](https://github.com/robindrost/prismic-eloquent)
 
 ## Setup
 
