@@ -9,7 +9,13 @@ class BlogPostController extends PrismicController
 {
     public function index()
     {
-        $blogPosts = BlogPost::orderBy('first_publication_date')->paginate(4);
+        $query = BlogPost::orderBy('first_publication_date');
+
+        if (! empty($tag = request('tag'))) {
+            $query->whereTag($tag);
+        }
+
+        $blogPosts = $query->paginate(4);
 
         return view('blog-post.index', compact('blogPosts'));
     }

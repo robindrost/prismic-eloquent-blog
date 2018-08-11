@@ -1,6 +1,9 @@
 <div class="w-full sm:w-1/2 px-4 mb-12 flex-no-shrink">
     <a href="{{ route('blog.show', ['slug' => $blogPost->uid]) }}" class="flex flex-col h-full w-full rounded overflow-hidden shadow-lg no-underline hover:bg-grey-light inline-block">
-        <img width="480" height="290" class="w-full lazyload" data-src="{{ $blogPost->heroImage->teaser->url }}" alt="{{ $blogPost->heroImage->teaser->copyright }}">
+        <img
+            width="480" height="290" class="w-full lazyload"
+            data-src="{{ $blogPost->heroImage->teaser->url }}" alt="{{ $blogPost->heroImage->teaser->copyright }}"
+            alt="{{ $blogPost->heroImage->hero->alt }}">
         <div class="px-6 py-4 mb-auto">
             <span class="font-bold mb-2 text-black block">
                 {{ $richText->asText($blogPost->title) }}

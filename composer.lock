@@ -1544,12 +1544,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/robindrost/prismic-eloquent.git",
-                "reference": "03f1e01a053ca86da5b5eb70d3049b3ac06ea4c5"
+                "reference": "555b653d79d6e063ba6483a1e37089c68b1adba1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robindrost/prismic-eloquent/zipball/03f1e01a053ca86da5b5eb70d3049b3ac06ea4c5",
-                "reference": "03f1e01a053ca86da5b5eb70d3049b3ac06ea4c5",
+                "url": "https://api.github.com/repos/robindrost/prismic-eloquent/zipball/555b653d79d6e063ba6483a1e37089c68b1adba1",
+                "reference": "555b653d79d6e063ba6483a1e37089c68b1adba1",
                 "shasum": ""
             },
             "require": {
@@ -1587,7 +1587,7 @@
                 }
             ],
             "description": "Laravel package that let you use the Prismic api in a more (friendly) eloquent like way.",
-            "time": "2018-08-10T17:07:22+00:00"
+            "time": "2018-08-11T09:29:01+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

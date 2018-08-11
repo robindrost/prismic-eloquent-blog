@@ -11,15 +11,23 @@
         </div>
 
         <div class="text-center mb-8">
-            <img class="mb-2 rounded lazyload" data-src="{{ $blogPost->heroImage->hero->url }}">
+            <img class="mb-2 rounded lazyload" data-src="{{ $blogPost->heroImage->hero->url }}" alt="{{ $blogPost->heroImage->hero->alt }}">
             <small class="text-grey-dark">{{ $blogPost->heroImage->hero->copyright }}</small>
         </div>
 
-        <div class="w-3/4 mx-auto mb-12">
+        <div class="w-3/4 mx-auto mb-8">
             @foreach ($blogPost->body as $block)
                 <div class="mb-2 text-grey-darkest">
                     {!! $block->text !!}
                 </div>
+            @endforeach
+        </div>
+
+        <div class="w-3/4 mx-auto mb-12">
+            @foreach ($blogPost->tags as $tag)
+                <a href="{{ route('blog.index', ['tag' => $tag]) }}" class="inline-block bg-grey-lighter hover:bg-grey-light rounded-full px-3 py-1 mr-2 text-sm font-semibold text-grey-darker no-underline">
+                    #{{ $tag }}
+                </a>
             @endforeach
         </div>
 

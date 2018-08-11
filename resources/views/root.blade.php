@@ -2,8 +2,10 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="An example of a blog created with the Prismic Eloquent Laravel package.">
 
-    <title>Prismic Eloquent Example</title>
+    <title>Prismic Eloquent Example Blog</title>
 
     <link rel="stylesheet" type="text/css" href="{{ mix('css/site.css') }}">
 </head>
