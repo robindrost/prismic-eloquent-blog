@@ -4,6 +4,9 @@ This is an example on how to create a blog with Laravel and the Prismic Eloquent
 
 [Prismic Eloquent](https://github.com/robindrost/prismic-eloquent)
 
+## View on heroku
+[http://prismic-eloquent-blog.herokuapp.com/](http://prismic-eloquent-blog.herokuapp.com/)
+
 ## Setup
 
 -   `git clone https://github.com/robindrost/prismic-eloquent-blog.git`
