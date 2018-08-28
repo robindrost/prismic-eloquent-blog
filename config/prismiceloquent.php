@@ -9,7 +9,7 @@ return [
     | This value is the api url of your Prismic repository. You can find this
     | url on: https://REPOSITORY-NAME.prismic.io/settings/apps/
     |
-    */
+ */
     'url' => env('PRISMIC_ELOQUENT_URL', ''),
     /*
     |--------------------------------------------------------------------------
@@ -19,48 +19,29 @@ return [
     | This value is the api access token of your Prismic repository. You
     | can find this url on: https://REPOSITORY-NAME.prismic.io/settings/apps/
     |
-    */
+     */
     'access_token' => env('PRISMIC_ELOQUENT_ACCESS_TOKEN', ''),
-
     /*
     |--------------------------------------------------------------------------
-    | Document resolver
+    | Caching layer
     |--------------------------------------------------------------------------
     |
-    | These settings apply to the document resolver. Please change the settings
-    | bellow if you do not use the default namespace \App\ModelName or use
-    | custom model names that do not match the content type.
+    | These are the caching options. By default caching is disabled. The
+    | default caching layer is provided by this package. You do not have to
+    | configure anything else. The caching layer uses your configured laravel
+    | caching options.
     |
-    */
-    'document_resolver' => [
-        /*
-        |--------------------------------------------------------------------------
-        | Content type namespace.
-        |--------------------------------------------------------------------------
-        |
-        | You can either change it here for global use, or specify it on a custom
-        | document resolver that is returned from the getDocumentResolver in your
-        | models.
-        |
-        | You can also leave the namespace empty and define full class paths
-        | below.
-        */
-        'namespace' => '\\App\\',
+    | Please see the service provider on how to override the caching layer.
+    |
+     */
+    'cache' => [
+        // Enable or disable the caching layer.
+        'enabled' => env('PRISMIC_ELOQUENT_ENABLE_CACHE', false),
 
-        /*
-        |--------------------------------------------------------------------------
-        | Content type model relationship.
-        |--------------------------------------------------------------------------
-        |
-        | By default the document resolver will transform a document to a
-        | model based on the name content type name of the document.
-        |
-        | You will need to specify the content type and model in case your models
-        | do not match content types.
-        |
-        */
-        'models' => [
-            // 'content_type_name' => ModelName::class
-        ],
+        // This is the prefix string used on cache keys.
+        'prefix' => 'prismiceloquent',
+
+        // Time to live of the cache. Setting this value to 0 will cache it 'forever'.
+        'ttl' => 5,
     ],
 ];

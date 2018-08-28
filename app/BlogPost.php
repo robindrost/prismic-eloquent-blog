@@ -6,8 +6,8 @@ use RobinDrost\PrismicEloquent\Model;
 
 class BlogPost extends Model
 {
-    protected function relatedBlogPostsResolver()
+    protected function relatedBlogPosts()
     {
-        $this->getDocumentResolver()->resolveManyEagerLoaded($this->related_blog_posts);
+        $this->hasMany(BlogPost::class, 'related_blog_posts', 'blog_post');
     }
 }

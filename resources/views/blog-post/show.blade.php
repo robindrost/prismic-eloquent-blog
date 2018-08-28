@@ -11,7 +11,12 @@
         </div>
 
         <div class="text-center mb-8">
-            <img class="mb-2 rounded lazyload" data-src="{{ $blogPost->heroImage->hero->url }}" alt="{{ $blogPost->heroImage->hero->alt }}">
+            <img
+                width="1200"
+                height="360"
+                class="mb-2 rounded lazyload"
+                data-src="{{ $blogPost->heroImage->hero->url }}"
+                alt="{{ $blogPost->heroImage->hero->alt }}">
             <small class="text-grey-dark">{{ $blogPost->heroImage->hero->copyright }}</small>
         </div>
 

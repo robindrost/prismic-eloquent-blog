@@ -11,7 +11,7 @@ class BlogPostController extends PrismicController
     {
         $query = BlogPost::orderBy('first_publication_date');
 
-        if (! empty($tag = request('tag'))) {
+        if (!empty($tag = request('tag'))) {
             $query->whereTag($tag);
         }
 
@@ -22,11 +22,9 @@ class BlogPostController extends PrismicController
 
     public function show(Request $request)
     {
-        $blogPost = BlogPost::with('relatedBlogPosts')
-            ->fetch('blog_post.title', 'blog_post.teaser', 'blog_post.hero_image')
-            ->find($request->slug);
+        $blogPost = BlogPost::with('relatedBlogPosts')->find($request->slug);
 
-        if (! empty($blogPost)) {
+        if (!empty($blogPost)) {
             return view('blog-post.show', compact('blogPost'));
         }
 

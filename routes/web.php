@@ -9,6 +9,7 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 Route::get('/', 'BlogPostController@index')->name('blog.index');
+Route::post('/webhook', 'WebhookController');
 Route::get('/{slug}', 'BlogPostController@show')->name('blog.show');
